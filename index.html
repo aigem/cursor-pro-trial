@@ -275,6 +275,72 @@
 
         regenerateJSON();
     </script>
+
+
+    <script>
+        const translations = {
+            "zh-CN": {
+                title: "手动替换Cursor设备 ID",
+                path: "C:\\Users\\[用户]\\AppData\\Roaming\\Cursor\\User\\globalStorage\\storage.json",
+                tutorial: "视频教程",
+                regenerate: "重新生成 ID",
+                tip: "提示：你可以通过按 WIN + R 并粘贴以下路径来快速打开",
+                pathTip: "%APPDATA%\\Cursor\\User\\globalStorage\\storage.json",
+                note: "mac、linux 用户使用方法请看github说明",
+                warning: "在运行脚本之前，你必须先退出并完全关闭 Cursor。否则它可能会恢复到之前的设备 ID，使重置无效。",
+                github: "在 GitHub 上查看(点个星星呗)"
+            },
+            "en-US": {
+                title: "Manually Replace Cursor Device ID",
+                path: "C:\\Users\\[User]\\AppData\\Roaming\\Cursor\\User\\globalStorage\\storage.json",
+                tutorial: "Video Tutorial",
+                regenerate: "Regenerate ID",
+                tip: "Tip: You can quickly open the file by pressing WIN + R and pasting the following path",
+                pathTip: "%APPDATA%\\Cursor\\User\\globalStorage\\storage.json",
+                note: "For macOS and Linux users, see GitHub instructions",
+                warning: "Before running the script, you must exit and completely close Cursor. Otherwise, it may revert to the previous device ID, making the reset ineffective.",
+                github: "View on GitHub (Give it a star!)"
+            },
+            "ru-RU": {
+                title: "Ручная замена ID устройства Cursor",
+                path: "C:\\Users\\[User]\\AppData\\Roaming\\Cursor\\User\\globalStorage\\storage.json",
+                tutorial: "Видеоурок",
+                regenerate: "Сгенерировать ID",
+                tip: "Совет: Вы можете быстро открыть файл, нажав WIN + R и вставив следующий путь",
+                pathTip: "%APPDATA%\\Cursor\\User\\globalStorage\\storage.json",
+                note: "Пользователям macOS и Linux см. инструкции на GitHub",
+                warning: "Перед запуском скрипта необходимо выйти и полностью закрыть Cursor. В противном случае он может восстановить предыдущий ID устройства, что сделает сброс неэффективным.",
+                github: "Открыть на GitHub (Поставьте звезду!)"
+            },
+
+            "uk-UA": {
+                title: "Ручна заміна ID пристрою Cursor",
+                path: "C:\\Users\\[User]\\AppData\\Roaming\\Cursor\\User\\globalStorage\\storage.json",
+                tutorial: "Відеоурок",
+                regenerate: "Згенерувати ID",
+                tip: "Порада: Ви можете швидко відкрити файл, натиснувши WIN + R і вставивши такий шлях",
+                pathTip: "%APPDATA%\\Cursor\\User\\globalStorage\\storage.json",
+                note: "Користувачам macOS і Linux див. інструкції на GitHub",
+                warning: "Перед запуском скрипту потрібно вийти та повністю закрити Cursor. В іншому випадку він може відновити попередній ID пристрою, що зробить скидання неефективним.",
+                github: "Відкрити на GitHub (Поставте зірку!)"
+            }
+
+        };
+
+        function setLanguage() {
+            const lang = navigator.language in translations ? navigator.language : "en-US";
+            document.querySelector("h1").textContent = translations[lang].title;
+            document.querySelector("sup").innerHTML = `${translations[lang].path} <a href='https://www.bilibili.com/video/BV1UhrbYzEvC/' target='_blank'>${translations[lang].tutorial}</a>`;
+            document.getElementById("regenerate-btn").textContent = translations[lang].regenerate;
+            document.querySelector(".tip p").innerHTML = `<strong>${translations[lang].tip}:</strong> ${translations[lang].pathTip}`;
+            document.querySelector(".tip p:last-child").textContent = translations[lang].note;
+            document.querySelector(".important").innerHTML = `<a href='https://www.bilibili.com/video/BV1UhrbYzEvC/' target='_blank'>[${translations[lang].tutorial}]</a> ${translations[lang].warning}`;
+            document.querySelector(".github-btn").textContent = translations[lang].github;
+        }
+
+        setLanguage();
+    </script>
+
 </body>
 
 </html>
