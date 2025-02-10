@@ -1,57 +1,27 @@
-## 【官方加强了检测机制，本方法已不适用，请关注后续更新】
+# Cursor Pro Trial 续用方法
 
-# Cursor 设备标识生成器
+一个纯天然安全、简便、快捷实用的 Cursor Pro Trial 续用方法
 
-一个安全、简便、快捷的 Cursor Pro Trial 设备标识重置工具。
+## 使用步骤 【[视频教程](https://space.bilibili.com/3493076850968674/search/dynamic?keyword=cursor)】
 
-## 功能特点
+1. 下载 Geek.exe [卸载工具（免费）](https://geekuninstaller.com/download/)
+2. 完全卸载 Cursor 应用程序
+3. 重新安装 Cursor 应用程序（官网自行下载）
+4. 启动 Cursor 并使用**新账户**登录
 
-- 🔒 安全可靠：纯前端生成，无需后端服务
-- 🚀 快速便捷：一键生成新的设备标识
-- 💻 跨平台支持：Windows、macOS 和 Linux
-
-## 使用步骤
-
-1. 退出cursor的登录账号，确保 Cursor 完全关闭（包括后台进程），一般关闭Cursor就可以了。
-2. 打开工具页面，点击"重新生成 ID"按钮。页面地址在[这里](https://cursor-id.duu.men/),或看简介链接
-3. 根据您的操作系统，找到并打开对应的配置文件：
-   - Windows（win键+R，输入）: `%APPDATA%\Cursor\User\globalStorage\storage.json`
-   - macOS: `~/Library/Application Support/Cursor/User/globalStorage/storage.json`
-   - Linux: `~/.config/Cursor/User/globalStorage/storage.json`
-4. 将生成的三个标识码复制替换到配置文件中：
-   - `telemetry.macMachineId`
-   - `telemetry.machineId`
-   - `telemetry.devDeviceId`
-5. 保存文件
-6. 重新启动 Cursor 并登录
-7. 确保Cursor Pro Trial（pro测试） 账号正常，就可以正常使用了。
-
-## 快速访问配置文件
-
-### Windows
-1. 按 `Win + R` 打开运行对话框
-2. 粘贴 `%APPDATA%\Cursor\User\globalStorage\storage.json`
-3. 点击确定
-
-### macOS
-1. 在 Finder 中按 `Command + Shift + G`
-2. 粘贴 `~/Library/Application Support/Cursor/User/globalStorage/storage.json`
-3. 点击前往
-
-### Linux
-直接在终端中使用编辑器打开：
-```bash
-nano ~/.config/Cursor/User/globalStorage/storage.json
-或
-vim ~/.config/Cursor/User/globalStorage/storage.json
-```
 
 ## 注意事项
 
-- ⚠️ 使用前请确保 Cursor 完全关闭
-- 💾 建议在修改前备份原配置文件
-- 🔄 如果修改后无效，请检查 Cursor 是否还在后台运行。
+- ⚠️ 新账户注册问题，有人注册不上? 可以不同IP都试试。如果有需要，[推荐我实际使用超一年的魔法梯，速度快且稳定，128元/年，每月可达20G*5流量。](https://flowercloud.net/aff.php?aff=7344)
+- 💾 建议在删除前备份cursor原配置等相关文件
+- 🔄 mac平台也可以参考上述方法，使用相关软件完全卸载，然后重新安装。
+- 如果不想使用上述方法，可以考虑最后一条。
 
 ## 免责声明
 
 本工具仅供学习和研究使用。使用本工具产生的任何问题和风险由使用者自行承担。cursor 是一个不错的编辑器，条件允许，请购买支持。
+
+## 不提倡的方法：
+
+- 不要到闲鱼等上面购买所谓的“Cursor Pro 自动注册”，因为这些github上都有，项目地址：[cursor-auto-free](https://github.com/chengazhen/cursor-auto-free)。
+- 上面那个是自动注册，但是需要你有一定的动手能力。如果不想像我给出的方法这么麻烦，可以考虑使用这一个：[cursor-help](https://github.com/Nikitosshow/cursor-help)。
