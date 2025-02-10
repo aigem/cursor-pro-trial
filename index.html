@@ -203,33 +203,36 @@
 
 <body>
     <div class="container">
-        <h1>手动替换Cursor设备 ID</h1>
-
-        <sup>
-            C:\Users\[用户]\AppData\Roaming\Cursor\User\globalStorage\storage.json <a
-                href="https://www.bilibili.com/video/BV1UhrbYzEvC/" target="_blank">视频教程</a>
-        </sup>
-
-        <div class="json-block" id="json-block"></div>
-
-        <button id="regenerate-btn">重新生成 ID</button>
+        <h1>Cursor Pro Trial 续用工具</h1>
 
         <div class="tip">
             <p>
-                <strong>提示：</strong> 你可以通过按
-                <strong>WIN + R</strong> 并粘贴以下路径来快速打开
-                <code class="path">%APPDATA%\Cursor\User\globalStorage\storage.json</code>
-                文件。
+                <strong>方法一（推荐）：完全卸载重装</strong>
             </p>
-            <p>
-                mac、linux 用户使用方法请看github说明
-            </p>
+            <p>1. 下载 <a href="https://geekuninstaller.com/download/" target="_blank">Geek.exe 卸载工具（免费）</a></p>
+            <p>2. 完全卸载 Cursor 应用程序</p>
+            <p>3. 重新安装 Cursor 应用程序（官网自行下载）</p>
+            <p>4. 启动 Cursor 并使用<strong>新账户</strong>登录</p>
         </div>
 
         <p class="important">
-            <a href="https://www.bilibili.com/video/BV1UhrbYzEvC/" target="_blank">[视频教程]</a> 在运行脚本之前，你必须先退出并完全关闭
-            Cursor。
-            否则它可能会恢复到之前的设备 ID，使重置无效。
+            ⚠️ 新账户注册问题：如果注册不上可以尝试不同IP。
+        </p>
+        <p class="important">
+            自用超一年亲测速度快且稳定好用 <a href="https://flowercloud.net/aff.php?aff=7344" target="_blank">推荐链接(128元/年)</a>
+        </p>
+
+
+
+        <div class="tip">
+            <p>💾 建议在删除前备份cursor原配置等相关文件</p>
+            <p>🔄 mac平台也可以参考上述方法，使用相关软件完全卸载，然后重新安装</p>
+        </div>
+
+        <p class="important">
+            如果不想使用上述方法，可以考虑：<br>
+            请不要闲鱼上购买，可能都是github上的项目，比如这个<a href="https://github.com/chengazhen/cursor-auto-free" target="_blank">cursor-auto-free</a> (需要动手能力)<br>
+            或者 <a href="https://github.com/Nikitosshow/cursor-help" target="_blank">cursor-help</a>
         </p>
 
         <a href="https://github.com/aigem/cursor-pro-trial" class="github-btn" target="_blank">
@@ -237,44 +240,6 @@
             在 GitHub 上查看(点个星星呗)
         </a>
     </div>
-
-    <script>
-        function getRandHex() {
-            let array = new Uint8Array(32);
-            window.crypto.getRandomValues(array);
-            return Array.from(array)
-                .map((byte) => byte.toString(16).padStart(2, "0"))
-                .join("");
-        }
-
-        function getGuid() {
-            return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
-                /[xy]/g,
-                function (c) {
-                    let r = (Math.random() * 16) | 0;
-                    let v = c === "x" ? r : (r & 0x3) | 0x8;
-                    return v.toString(16);
-                }
-            );
-        }
-
-        function regenerateJSON() {
-            const jsonStructure = {
-                "telemetry.macMachineId": getRandHex(),
-                "telemetry.machineId": getRandHex(),
-                "telemetry.devDeviceId": getGuid(),
-            };
-
-            const jsonBlock = document.getElementById("json-block");
-            jsonBlock.textContent = JSON.stringify(jsonStructure, null, 4);
-        }
-
-        document
-            .getElementById("regenerate-btn")
-            .addEventListener("click", regenerateJSON);
-
-        regenerateJSON();
-    </script>
 </body>
 
 </html>
