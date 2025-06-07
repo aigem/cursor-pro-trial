@@ -25,3 +25,6 @@
 
 - 不要到闲鱼等上面购买所谓的“Cursor Pro 自动注册”，因为这些github上都有，项目地址：[cursor-auto-free](https://github.com/chengazhen/cursor-auto-free)。
 - 上面那个是自动注册，但是需要你有一定的动手能力。如果不想像我给出的方法这么麻烦，可以考虑使用这一个：[cursor-help](https://github.com/Nikitosshow/cursor-help)。
+
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
